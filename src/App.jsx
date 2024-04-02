@@ -20,6 +20,14 @@ function App() {
     })
     setInput("")
   }
+  function delItem(index){
+    setItem((prev)=>{
+      const data = prev.filter((prev)=>{
+        return prev.id != index;
+      })
+      return data;
+    })
+  }
   return (
     <>
       <div className='container'>
@@ -38,6 +46,7 @@ function App() {
             return(<ListItem 
               id = {item.id}
               text = {item.text}
+              del = {delItem}
             />)
           })}  
           </ul>
