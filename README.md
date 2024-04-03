@@ -21,19 +21,14 @@ To run the app locally, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/todo-app.git
+   git clone https://github.com/imdfaizuddin/ToDo-App-ReactJs.git
 
-
-2. Navigate to the project directory:
-    ```bash
-    cd todo-app
-
-3. Install dependencies:
+2. Install dependencies:
     ```bash
     npm install
 
-4. Start the development server:
-
+3. Start the development server:
+    ```bash
     npm run dev
 
     Open your browser and visit http://localhost:5173 to view the app.
@@ -54,15 +49,11 @@ This will generate optimized production-ready assets in the dist directory.
 
 Contributions are welcome! If you'd like to contribute to this project, please follow these guidelines:
 
-1.Fork the repository.
-2.Create a new branch (git checkout -b feature/your-feature-name).
-3.Commit your changes (git commit -am 'Add new feature').
-4.Push to the branch (git push origin feature/your-feature-name).
-5.Create a new Pull Request.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
+    1.Fork the repository.
+    2.Create a new branch (git checkout -b feature/your-feature-name).
+    3.Commit your changes (git commit -am 'Add new feature').
+    4.Push to the branch (git push origin feature/your-feature-name).
+    5.Create a new Pull Request.
 
 ## Acknowledgements
 
