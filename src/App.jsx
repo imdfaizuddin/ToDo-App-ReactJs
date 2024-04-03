@@ -6,23 +6,23 @@ function App() {
   const [count, setCount] = useState(0)
   const [item, setItem] = useState([])
   const [input, setInput] = useState("")
-  function inputValue(event){
-    const {value} = event.target;
+  function inputValue(event) {
+    const { value } = event.target;
     setInput(value)
   }
-  function addItem(){
-    setCount((count)=> count +1)
-    setItem((prev)=>{
+  async function addItem() {
+    setCount(count + 1)
+    setItem((prev) => {
       return [...prev, {
-        id : count,
-        text : input
+        id: count,
+        text: input
       }]
     })
     setInput("")
   }
-  function delItem(index){
-    setItem((prev)=>{
-      const data = prev.filter((prev)=>{
+  function delItem(index) {
+    setItem((prev) => {
+      const data = prev.filter((prev) => {
         return prev.id != index;
       })
       return data;
@@ -31,24 +31,25 @@ function App() {
   return (
     <>
       <div className='container'>
-        <div className = "heading">
+        <div className="heading">
           <h1>To-Do List</h1>
         </div>
-        <div className= "form">
-          <input type="text" value={input} onChange={inputValue}/>
-          <button onClick={addItem}>
+        <div className="form">
+          <input type="text" value={input} onChange={inputValue} />
+          <button className='button' onClick={addItem}>
             <span>Add</span>
-          </button> 
+          </button>
         </div>
         <div>
           <ul>
-          {item.map((item)=>{
-            return(<ListItem 
-              id = {item.id}
-              text = {item.text}
-              del = {delItem}
-            />)
-          })}  
+            {item.map((item) => {
+              return (<ListItem
+                id={item.id}
+                key={item.id}
+                text={item.text}
+                del={delItem}
+              />)
+            })}
           </ul>
         </div>
       </div>

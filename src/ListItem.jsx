@@ -1,9 +1,10 @@
 import React from "react";
 
-function ListItem(props){
-    return(<li onClick={()=>{
-        props.del(props.id)
-    }}>{props.text}</li>)
+function ListItem(props) {
+    return (<li>
+                <span>{props.text}</span>
+                <img onClick={() => props.del(props.id)} src="/delete.png" alt="delete btn" />
+            </li>)
 }
 
 export default ListItem;
