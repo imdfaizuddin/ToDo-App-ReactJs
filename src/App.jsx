@@ -5,6 +5,7 @@ import ListItem from './ListItem';
 function App() {
   const [count, setCount] = useState(0)
   const [item, setItem] = useState([])
+  const [deletedItem, addDelItem] = useState([])
   const [input, setInput] = useState("")
   function inputValue(event) {
     const { value } = event.target;
@@ -23,10 +24,14 @@ function App() {
   function delItem(index) {
     setItem((prev) => {
       const data = prev.filter((prev) => {
+        if(prev.id === index){  
+          addDelItem((p)=>[...p, prev]);
+        }
         return prev.id != index;
       })
       return data;
     })
+    console.log(deletedItem);
   }
   return (
     <>
